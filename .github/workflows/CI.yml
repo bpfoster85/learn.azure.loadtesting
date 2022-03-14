@@ -36,7 +36,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./iacrepo/Main_Deployments/FullAppServiceDeployment.bicep
-        parameters: name=${{github.event.inputs.ProjectName }} location=${{ secrets.AZURE_RG }}
+        parameters: name=${{github.event.inputs.ProjectName }} location='westus2'
         failOnStdErr: false  
 
         
