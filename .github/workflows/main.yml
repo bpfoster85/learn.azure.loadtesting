@@ -28,7 +28,7 @@ jobs:
      - name: Deploying iac
        uses: azure/login@v1
        with:
-        creds: ${{ secrets.AZURE_RBAC_DEPLOY }}.
+        creds: ${{ secrets.AZURE_RBAC_DEPLOY }}
 
      - name: deploy
        uses: azure/arm-deploy@v1
