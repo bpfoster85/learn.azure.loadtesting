@@ -10,7 +10,8 @@ on:
                   description: 'projectName'     
                   required: true
                 Location:
-                  description: 'West US 2'     
+                  description: 'West US 2'
+                  default: 'West US 2'
                   required: true
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
