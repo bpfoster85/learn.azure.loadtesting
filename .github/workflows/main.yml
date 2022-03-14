@@ -37,7 +37,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./iacrepo/App Service Plan/consumption-plan.bicep
-         parameters: planName=xxxx
+        parameters: planName=xxxx
         failOnStdErr: false  
 
         
