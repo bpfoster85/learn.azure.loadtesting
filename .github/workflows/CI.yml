@@ -9,10 +9,7 @@ on:
                 ProjectName:
                   description: 'projectName'     
                   required: true
-                Location:
-                  description: 'West US 2'
-                  default: 'West US 2'
-                  required: true
+           
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -40,7 +37,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./iacrepo/Main_Deployments/FullAppServiceDeployment.bicep
-        parameters: name=${{github.event.inputs.ProjectName }} location=${{github.event.inputs.Location }}
+        parameters: name=${{github.event.inputs.ProjectName }} location=''
         failOnStdErr: false  
 
         
