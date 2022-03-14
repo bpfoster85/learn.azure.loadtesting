@@ -25,6 +25,7 @@ jobs:
          repository: bpfoster85/learn.iac-bicep-modules
          path: ./iacrepo
   deploy-iac:
+    needs: build-iac
     runs-on: ubuntu-latest
     steps:
           # Log into Azure
