@@ -24,6 +24,8 @@ jobs:
          # Repository name with owner. For example, actions/checkout
          repository: bpfoster85/learn.iac-bicep-modules
          path: ./iacrepo
+     
+          
   deploy-iac:
     needs: build-iac
     runs-on: ubuntu-latest
@@ -32,10 +34,6 @@ jobs:
         - uses: azure/login@v1
           with:
             creds: ${{ secrets.AZURE_RBAC_DEPLOY }}.
-            
-        - name: checking dir
-          run: ls
-            
             
         - name: deploy
           uses: azure/arm-deploy@v1
