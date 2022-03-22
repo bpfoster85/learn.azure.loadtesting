@@ -61,7 +61,7 @@ jobs:
       - name: Deploying iac
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_RBAC_DEPLOY }}
+          creds: ${{ secrets.LOADTEST_AZURE_CREDENTIALS }}
   test:  
     runs-on: ubuntu-latest
     needs: build
