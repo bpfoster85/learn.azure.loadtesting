@@ -62,8 +62,10 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_RBAC_DEPLOY }}
-          
-          
+  test:  
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Azure Load Testing
         uses: Azure/load-testing@v1
         with:
