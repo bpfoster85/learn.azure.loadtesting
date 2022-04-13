@@ -3,3 +3,6 @@ testName: SampleAppTest
 testPlan: test_script.jmx
 description: 'Running the test script'
 engineInstances: 1
+failureCriteria:
+  - avg(response_time_ms) > 300
+  - percentage(error) > 50
